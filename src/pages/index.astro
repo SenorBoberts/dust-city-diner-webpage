@@ -1,16 +1,31 @@
 ---
-
+import DefaultLayout from "../layouts/defaultLayout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<DefaultLayout>
+	<div id="header">
+		<div>
+			<h1 id="headline">The diner is returning to the playa in 2025</h1>
+		</div>
+		<img src="images/diner_man2.jpg">
+	</div>
+</DefaultLayout>
+
+<style>
+	#header{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+	}
+	#headline{
+		padding-bottom: 5rem;
+	}
+	img{
+		width: 25rem;
+		height: 25rem;
+		object-fit: cover;
+		border-radius: 50%;
+		border: .25rem solid var(--blue);
+	}
+</style>

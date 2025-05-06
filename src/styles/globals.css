@@ -1,0 +1,17 @@
+:root {
+    --yellow: #FFE600;
+    --red: #D71920;
+    --blue: #004AAD;
+    --dark: #2C2C2C;
+    --light: #FFFFFF;
+  
+    /* Optional variations */
+    --red-dark: #AA1016;
+    --blue-light: #3366CC;
+  
+    /* Typography and layout helpers */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

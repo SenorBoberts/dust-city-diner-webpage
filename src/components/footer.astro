@@ -1,0 +1,36 @@
+---
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
+<footer>
+    <small>
+        <p>&copy <span id="year"></span> Dust City Diner. All rights reserved.</p>
+        <ul>
+            <li><a href="https://www.instagram.com/dustcitydiner/"><i class="fa-brands fa-instagram fa-1.5x"></i></a></li>
+            <li><a href="https://www.facebook.com/DustCityDiner"><i class="fa-brands fa-facebook-square fa-1.5x"></i></a></li>
+        </ul>
+    </small>
+</footer>
+
+<script>
+    const year = document.querySelector("#year")
+    if(year){
+        year.textContent = new Date().getFullYear().toString();
+    }
+</script>
+
+<style>
+    footer{
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        justify-content: center;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+</style>
