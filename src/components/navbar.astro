@@ -1,34 +1,49 @@
 ---
 ---
 
-<div>
+<div id="navbar">
     <nav>
         <span>
             <img id="homeImage" src="images/logo.png">
         </span>
-        <ul>
-            <li><a>Donate for 2025!</a></li>
-            <li><a>About</a></li>
-            <li><a>Newsletter</a></l1>
-            <li><a>Contact Us</a></li>
-        </ul>
+        <div id="right">
+            <ul>
+                <li><a>Donate for 2025!</a></li>
+                <li><a>About</a></li>
+                <li><a>Newsletter</a></l1>
+                <li><a>Contact Us</a></li>
+            </ul>
+            <div>
+                <hr><hr><hr>
+            </div>
+        </div>
     </nav>
 </div>
 
 <style>
+    #navbar{
+        padding: 0 1rem 1rem 1rem;
+    }
     nav{
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        padding: 0 1rem;
     }
     img{
         height: auto;
-        width: 6rem;
+        width: 7rem;
+    }
+    #right{
+        width: 100%;
     }
     ul{
-        list-style: none;
         display: flex;
         gap: 2rem;
+        justify-content: right;
+    }
+    li{
+        list-style: none;
+    }
+    hr{
+        border-color: var(--blue);
     }
 </style>
