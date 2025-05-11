@@ -4,10 +4,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 <footer>
     <small>
+        <img src="images/logolady.png">
         <p>&copy <span id="year"></span> Dust City Diner. All rights reserved.</p>
         <ul>
-            <li><a href="https://www.instagram.com/dustcitydiner/"><i class="fa-brands fa-instagram fa-1.5x"></i></a></li>
-            <li><a href="https://www.facebook.com/DustCityDiner"><i class="fa-brands fa-facebook-square fa-1.5x"></i></a></li>
+            <li><a href="https://www.instagram.com/dustcitydiner/"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://www.facebook.com/DustCityDiner"><i class="fa-brands fa-facebook-square fa-2x"></i></a></li>
         </ul>
     </small>
 </footer>
@@ -28,9 +29,18 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
         gap: 1rem;
         list-style: none;
         justify-content: center;
+        margin: 0;
+        padding: 0;
     }
     a{
         text-decoration: none;
         color: black;
+    }
+    a:hover{
+       color: var(--red);
+    }
+    img{
+        height: 5rem;
+        width: auto;
     }
 </style>
