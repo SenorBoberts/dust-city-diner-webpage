@@ -12,7 +12,10 @@ const baseUnit = 2; //vw base unit
 				<div id="header">
 					<div>
 						<h1 id="headline">Servin’ up sass and grilled cheese to the playa’s weary travelers since 2008</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>The Dust City Diner runs on a heap of love, a fistful of grit, and YOU, our deliciously supportive community!
+Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged) waitress staff back together to make another jaw-dropping appearance with GRILLED CHEESE FOR EVERYONE on the Playa in 2025!
+</p>
+						<a href="#"><b><i class="arrow">&rarr;</i>Click here to visit our 2025 fundraiser!<i class="arrow">&larr;</i></b></a>
 					</div>
 					<img src="images/diner_man2.jpg">
 				</div>
@@ -62,17 +65,19 @@ const baseUnit = 2; //vw base unit
 		height: 20vw;
 		object-fit: cover;
 		border-radius: 50%;
-		border: .25rem solid var(--blue);
+		box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
 	}
 	.cloud-container{
 		padding: calc(var(--unit) * 8.5) 0 calc(var(--unit) * 2) 0;
 	}
-
 	#cloud2{
 		align-self: flex-start;
 	}
 	#cloud3{
 		align-self: flex-end;
+	}
+	.arrow{
+		font-size: 2rem;
 	}
 	@media (max-width: 1300px){
 		#content{

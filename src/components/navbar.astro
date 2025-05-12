@@ -25,9 +25,12 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: .5rem 1rem 1rem 1rem;
-        width: 98%;
+        padding: .5rem 1rem 0rem 1rem;
+        width: 100%;
         font-size: large;
+        background: var(--cloud-color);
+        box-sizing: border-box;
+        box-shadow: 0 .1rem .1rem var(--lightblue);
     }
     nav{
         display: flex;
@@ -49,11 +52,8 @@
         list-style: none;
     }
     hr{
+        margin: 0 0 .3rem 0;
         border-color: var(--blue);
-    }
-    a{
-        text-decoration: none;
-        color: black;
     }
     a:hover{
         color: var(--red);

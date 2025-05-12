@@ -3,7 +3,7 @@
     --red: #D71920;
     --blue: #004AAD;
     --dark: #2C2C2C;
-    --cloud-color: #FFFFFF;
+    --cloud-color: #f2ebde;
     --light: #FFFFFF;
   
     /* Optional variations */
@@ -11,8 +11,12 @@
     --blue-light: #3366CC;
   
     /* Typography and layout helpers */
-    font-family: 'Oswald', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
+  a{
+    text-decoration: none;
+    color: black;
+  }
