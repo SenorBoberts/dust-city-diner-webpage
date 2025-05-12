@@ -1,38 +1,59 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro"
 import Cloud from "../components/cloud.astro"
+
+const baseUnit = 2; //vw base unit
 ---
 
 <DefaultLayout>
-	<div id="header">
-		<div>
-			<h1 id="headline">The diner is returning to the playa in 2025</h1>
+	<div id="content">
+		<div class="cloud-container">
+			<Cloud vwSize={baseUnit}>
+				<div id="header">
+					<div>
+						<h1 id="headline">The diner is returning to the playa in 2025</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<img src="images/diner_man2.jpg">
+				</div>
+			</Cloud>
 		</div>
-		<img src="images/diner_man2.jpg">
-	</div>
-	<div>
-		<Cloud id="cloud" />
 	</div>
 </DefaultLayout>
 
 <style>
+	#content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		--unit: 2vw;
+	}
 	#header{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 5rem;
-	}
-	#headline{
-		padding-bottom: 5rem;
+		gap: 1rem;
+		max-width: calc(var(--unit) * 25);
+		max-height: calc(var(--unit) * 10);
 	}
 	img{
-		width: 25rem;
-		height: 25rem;
+		width: 15rem;
+		height: 15rem;
 		object-fit: cover;
 		border-radius: 50%;
 		border: .25rem solid var(--blue);
 	}
-	#cloud{
-		width: 500px;
+	.cloud-container{
+		padding: calc(var(--unit) * 13) 0 5rem 0;
+		/*position: relative;*/
+	}
+	#cloud2{
+		align-items: flex-start;
+	}
+	@media (max-width: 768px){
+		#content{
+			--unit: 3vw;
+		}
 	}
 </style>

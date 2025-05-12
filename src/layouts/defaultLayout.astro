@@ -14,21 +14,36 @@ import "../styles/globals.css"
 		<title>Astro</title>
     </head>
     <body>
-        <Navbar />
         <main>
             <slot />
-        </main>
+        </main>    
         <Footer />
+        <Navbar />
+        <img src="images/Cartoon_Diner.png">
     </body>
 </html>
 
 <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
     body{
         display: flex;
         flex-direction: column;
-        /*background-image: url("images/DustCityDiner3.jpg");*/
+        background-image: url("Sunset_Background.png");
+        background-repeat: repeat-x;
+        height: 100vh;
     }
     main{
         flex: 1;
+        padding-top: 7rem;
+    }
+    img{
+        height: auto;
+        width: 25rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 </style>
