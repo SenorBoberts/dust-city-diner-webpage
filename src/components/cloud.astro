@@ -12,7 +12,7 @@
 <style>
 
   .cloud {
-    background: var(--blue, #87ceeb);
+    background: var(--cloud-color);
     border-radius: calc(var(--unit) * 10);
     box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
     height: calc(var(--unit) * 12);
@@ -24,26 +24,25 @@
   }
 
   .cloud-content {
-    width: calc(var(--unit) * 30);
-    height: calc(var(--unit) * 10);
+    width: calc(var(--unit) * 28);
+    height: calc(var(--unit) * 15);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: calc(var(--unit) * 1);
     box-sizing: border-box;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-  
-  .cloud-content ::slotted(*) {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    object-fit: contain; 
-  }
-  
 
+  .cloud-content::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  
   .cloud:after,
   .cloud:before {
-    background: var(--blue, #87ceeb);
+    background: var(--cloud-color);
     content: '';
     position: absolute;
     z-index: -1;
