@@ -8,7 +8,7 @@ const baseUnit = 2; //vw base unit
 <DefaultLayout>
 	<div id="content">
 		<div class="cloud-container">
-			<Cloud vwSize={baseUnit}>
+			<Cloud>
 				<div id="header">
 					<div>
 						<h1 id="headline">The diner is returning to the playa in 2025</h1>
@@ -34,8 +34,6 @@ const baseUnit = 2; //vw base unit
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
-		max-width: calc(var(--unit) * 25);
-		max-height: calc(var(--unit) * 10);
 	}
 	img{
 		width: 15rem;
@@ -45,15 +43,16 @@ const baseUnit = 2; //vw base unit
 		border: .25rem solid var(--blue);
 	}
 	.cloud-container{
-		padding: calc(var(--unit) * 13) 0 5rem 0;
-		/*position: relative;*/
+		padding: calc(var(--unit) * 8.5) 0 5rem 0;
 	}
-	#cloud2{
-		align-items: flex-start;
-	}
-	@media (max-width: 768px){
+	@media (max-width: 1300px){
 		#content{
-			--unit: 3vw;
+			--unit: 2.5vw;
+		}
+	}
+	@media (max-width: 900px){
+		#content{
+			--unit: 2.75vw;
 		}
 	}
 </style>

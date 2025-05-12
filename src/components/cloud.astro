@@ -1,28 +1,45 @@
 ---
-// Cloud.astro
-const { vwSize = 2 } = Astro.props; // vwSize as a percentage of viewport width
-
-console.log(vwSize)
 ---
 
-<!-- <div class="cloud-wrapper" style={`--unit: ${vwSize}vw;`}> -->
 <div class="cloud-wrapper">
   <div class="cloud">
-    <slot />
+    <div class="cloud-content">
+      <slot />
+    </div>
   </div>
 </div>
 
 <style>
+
   .cloud {
     background: var(--blue, #87ceeb);
     border-radius: calc(var(--unit) * 10);
     box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
     height: calc(var(--unit) * 12);
-    position: relative;
     width: calc(var(--unit) * 35);
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
+
+  .cloud-content {
+    width: calc(var(--unit) * 30);
+    height: calc(var(--unit) * 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--unit) * 1);
+    box-sizing: border-box;
+  }
+  
+  .cloud-content ::slotted(*) {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    object-fit: contain; 
+  }
+  
 
   .cloud:after,
   .cloud:before {
@@ -48,6 +65,7 @@ console.log(vwSize)
     top: calc(var(--unit) * -9);
   }
 </style>
+
 
 
 
