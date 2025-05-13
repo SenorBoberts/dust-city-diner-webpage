@@ -1,11 +1,31 @@
 ---
-
+import "@splidejs/splide/css"
+import { Splide, SplideSlide } from 'astro-splide';
 ---
 
-<div id="gallery">
-    <h1>photo_gallery</h1>
-</div>
+<Splide aria-label="My Favorite Images">
+    <SplideSlide>
+      <img src="images/DustCityDiner3.jpg" alt="Image 1"/>
+    </SplideSlide>
+    <SplideSlide>
+      <img src="images/diner_man.jpg" alt="Image 2"/>
+    </SplideSlide>
+</Splide>
 
 <style>
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  img {
+    max-width: 30vw;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
 </style>

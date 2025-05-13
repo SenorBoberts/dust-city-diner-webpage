@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro"
 import Cloud from "../components/cloud.astro"
+import PhotoGallery from "../components/photo_gallery.astro"
 
 const baseUnit = 2; //vw base unit
 ---
@@ -15,32 +16,36 @@ const baseUnit = 2; //vw base unit
 						<p>The Dust City Diner runs on a heap of love, a fistful of grit, and YOU, our deliciously supportive community!
 Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged) waitress staff back together to make another jaw-dropping appearance with GRILLED CHEESE FOR EVERYONE on the Playa in 2025!
 </p>
-						<a href="#"><b><i class="arrow">&rarr;</i>Click here to visit our 2025 fundraiser!<i class="arrow">&larr;</i></b></a>
+						<a href="https://dustcitydiner.myshopify.com/"><b><i class="arrow">&rarr;</i>Click here to visit our 2025 fundraiser!<i class="arrow">&larr;</i></b></a>
 					</div>
-					<img src="images/diner_man2.jpg">
+					<img id="headerimg" src="images/diner_man2.jpg">
 				</div>
 			</Cloud>
 		</div>
 		<div class="cloud-container" id="cloud2">
 			<Cloud>
 				<div id="header">
+					<img id="dinersketch" src="images/dcdsketch.png">
 					<div>
-						<h1 id="headline">The diner is returning to the playa in 2025</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>A '40s American diner that would make Betty Boop swoon—quilted steel backsplash gleaming under the stars, a neon sign that glows much prettier than those damn blinkie lights, and red leather stools just beggin' for your dusty behind.
+You'll stumble upon her when your feet are blistered and your water bottle's running dry, somewhere out in deep Playa. She's a fickle mistress, never in the same spot twice... but you'll find her if your heart is true (and your hunger is real)! Just follow the sultry sounds of the Ink Spots and Andrews Sisters floating across the dust, or the unmistakable cackling of night owls swapping tales at our counter. Then BOOM! There she is in all her neon glory—a warm, butter-scented oasis in the cold night with an open seat that’s been waiting just for you.
+We'll slap down a piping hot grilled cheese with a pickle so crisp it'll wake your third eye, pour you a bottomless cup of coffee—and honey, our waitresses will serve it with waaaayyy too much sass because they've clearly been spending too much time in the sun... 
+</p>
 					</div>
-					<img src="images/diner_man2.jpg">
 				</div>
 			</Cloud>
 		</div>
 		<div class="cloud-container" id="cloud3">
 			<Cloud>
-				<div id="header">
+				<div id="gallery-container">
 					<div>
-						<h1 id="headline">The diner is returning to the playa in 2025</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Since 2010, the Burning Man gods granted us permission to arrive early and feed grilled cheese to those beautiful, starving creatures building massive art in the desert. Along with feeding every dusty wanderer who crosses our path, this has also become a meaningful part of our performance art mission.
+Hell, the Dust City Diner's grilled cheese has even been featured in Saveur magazine! That's right—we're FAMOUS, baby!
+</p>
+						<a href="/gallery"><p>Click here to see more images in our photo gallery &larr;</p></a>
 					</div>
-					<img src="images/diner_man2.jpg">
-				</div>
+					<img id="galleryimg" src="images/Douglas Tom Julia.jpg">
+				</div>	
 			</Cloud>
 		</div>
 	</div>
@@ -60,7 +65,7 @@ Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged
 		align-items: center;
 		gap: 1rem;
 	}
-	img{
+	#headerimg{
 		width: 20vw;
 		height: 20vw;
 		object-fit: cover;
@@ -73,11 +78,30 @@ Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged
 	#cloud2{
 		align-self: flex-start;
 	}
+	#dinersketch{
+		width: 20vw;
+		height: 20vw;
+		object-fit: cover;
+		flex-shrink: 1;
+	}
 	#cloud3{
 		align-self: flex-end;
 	}
 	.arrow{
 		font-size: 2rem;
+	}
+	#gallery-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+	#galleryimg{
+		width: 20vw;
+		height: 20vw;
+		object-fit: cover;
+		border-radius: 25%;
+		box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
 	}
 	@media (max-width: 1300px){
 		#content{
@@ -86,7 +110,7 @@ Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged
 	}
 	@media (max-width: 900px){
 		#content{
-			--unit: 2.75vw;
+			--unit: 3vw;
 		}
 	}
 </style>
