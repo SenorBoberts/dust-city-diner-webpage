@@ -10,22 +10,27 @@
 </div>
 
 <style>
+  .cloud-wrapper {
+    font-size: calc(var(--unit) * 0.9);
+  }
 
   .cloud {
     background: var(--cloud-color);
     border-radius: calc(var(--unit) * 10);
     box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
-    height: calc(var(--unit) * 12);
+    height: auto;
+    min-height: calc(var(--unit) * 12);
     width: calc(var(--unit) * 35);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: calc(var(--unit) * 2) 0;
   }
 
   .cloud-content {
     width: calc(var(--unit) * 28);
-    height: calc(var(--unit) * 15);
+    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

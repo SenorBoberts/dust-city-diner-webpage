@@ -12,7 +12,7 @@ const baseUnit = 2; //vw base unit
 			<Cloud>
 				<div id="header">
 					<div>
-						<h1 id="headline">Servin’ up sass and grilled cheese to the playa’s weary travelers since 2008</h1>
+						<h1 id="headline">Servin' up sass and grilled cheese to the playa's weary travelers since 2008</h1>
 						<p>The Dust City Diner runs on a heap of love, a fistful of grit, and YOU, our deliciously supportive community!
 Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged) waitress staff back together to make another jaw-dropping appearance with GRILLED CHEESE FOR EVERYONE on the Playa in 2025!
 </p>
@@ -28,7 +28,7 @@ Help us get our lipstick-wearing old lady and her fabulous (if slightly unhinged
 					<img id="dinersketch" src="images/dcdsketch.png">
 					<div>
 						<p>A '40s American diner that would make Betty Boop swoon—quilted steel backsplash gleaming under the stars, a neon sign that glows much prettier than those damn blinkie lights, and red leather stools just beggin' for your dusty behind.
-You'll stumble upon her when your feet are blistered and your water bottle's running dry, somewhere out in deep Playa. She's a fickle mistress, never in the same spot twice... but you'll find her if your heart is true (and your hunger is real)! Just follow the sultry sounds of the Ink Spots and Andrews Sisters floating across the dust, or the unmistakable cackling of night owls swapping tales at our counter. Then BOOM! There she is in all her neon glory—a warm, butter-scented oasis in the cold night with an open seat that’s been waiting just for you.
+You'll stumble upon her when your feet are blistered and your water bottle's running dry, somewhere out in deep Playa. She's a fickle mistress, never in the same spot twice... but you'll find her if your heart is true (and your hunger is real)! Just follow the sultry sounds of the Ink Spots and Andrews Sisters floating across the dust, or the unmistakable cackling of night owls swapping tales at our counter. Then BOOM! There she is in all her neon glory—a warm, butter-scented oasis in the cold night with an open seat that's been waiting just for you.
 We'll slap down a piping hot grilled cheese with a pickle so crisp it'll wake your third eye, pour you a bottomless cup of coffee—and honey, our waitresses will serve it with waaaayyy too much sass because they've clearly been spending too much time in the sun... 
 </p>
 					</div>
@@ -88,7 +88,7 @@ Hell, the Dust City Diner's grilled cheese has even been featured in Saveur maga
 		align-self: flex-end;
 	}
 	.arrow{
-		font-size: 2rem;
+		font-size: calc(var(--unit) * 1);
 	}
 	#gallery-container{
 		display: flex;
@@ -103,14 +103,51 @@ Hell, the Dust City Diner's grilled cheese has even been featured in Saveur maga
 		border-radius: 25%;
 		box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
 	}
+	
+	h1 {
+		font-size: calc(var(--unit) * 1);
+		/*margin: calc(var(--unit) * 0.25) 0;*/
+	}
+	
+	p {
+		font-size: calc(var(--unit) * 0.5);
+		line-height: 1.4;
+		/*margin: calc(var(--unit) * 0.25) 0;*/
+	}
+	
+	a {
+		font-size: calc(var(--unit) * 0.5);
+	}
+	
 	@media (max-width: 1300px){
 		#content{
 			--unit: 2.5vw;
 		}
 	}
+	
 	@media (max-width: 900px){
 		#content{
 			--unit: 3vw;
+		}
+		
+		#header, #gallery-container {
+			flex-direction: column;
+		}
+		
+		#headerimg, #dinersketch, #galleryimg {
+			width: 40vw;
+			height: 40vw;
+		}
+	}
+	
+	@media (max-width: 600px){
+		#content{
+			--unit: 4vw;
+		}
+		
+		#headerimg, #dinersketch, #galleryimg {
+			width: 60vw;
+			height: 60vw;
 		}
 	}
 </style>
