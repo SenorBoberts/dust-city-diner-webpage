@@ -1,0 +1,20 @@
+---
+// inside your Astro component or .astro file script
+const images = import.meta.glob('/src/assets/gallery_images/*', { eager: true });
+const image_srcs = Object.values(images).map((img) => (img as {default: string}).default);
+console.log(image_srcs[0]);
+---
+
+<div id="photowall">
+    <div id="col1">
+        <img src={image_srcs[0]}>
+    </div>
+    <div id="col2"></div>
+    <div id="col3"></div>
+</div>
+
+<style>
+    #photowall{
+        display: flex;
+    }    
+</style>
