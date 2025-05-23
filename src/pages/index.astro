@@ -1,9 +1,6 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro"
 import Cloud from "../components/cloud.astro"
-import PhotoGallery from "../components/photo_gallery.astro"
-
-const baseUnit = 2; //vw base unit
 ---
 
 <DefaultLayout>
@@ -52,81 +49,73 @@ Hell, the Dust City Diner's grilled cheese has even been featured in Saveur maga
 </DefaultLayout>
 
 <style>
-	#content{
+	#content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		--unit: 2vw;
 	}
-	#header{
+	
+	#header, #gallery-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
 	}
-	#headerimg{
+	
+	#headerimg, #dinersketch, #galleryimg {
 		width: 20vw;
 		height: 20vw;
 		object-fit: cover;
+	}
+	
+	#headerimg, #galleryimg {
 		border-radius: 50%;
 		box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
 	}
-	.cloud-container{
+	
+	#galleryimg {
+		border-radius: 25%;
+	}
+	
+	.cloud-container {
 		padding: calc(var(--unit) * 8.5) 0 calc(var(--unit) * 2) 0;
 	}
-	#cloud2{
+	
+	#cloud2 {
 		align-self: flex-start;
 	}
-	#dinersketch{
-		width: 20vw;
-		height: 20vw;
-		object-fit: cover;
-		flex-shrink: 1;
-	}
-	#cloud3{
+	
+	#cloud3 {
 		align-self: flex-end;
 	}
-	.arrow{
+	
+	.arrow {
 		font-size: calc(var(--unit) * 1);
-	}
-	#gallery-container{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-	}
-	#galleryimg{
-		width: 20vw;
-		height: 20vw;
-		object-fit: cover;
-		border-radius: 25%;
-		box-shadow: 0 calc(var(--unit) * 0.8) calc(var(--unit) * 0.5) rgba(0, 0, 0, 0.1);
 	}
 	
 	h1 {
 		font-size: calc(var(--unit) * 1);
-		/*margin: calc(var(--unit) * 0.25) 0;*/
+	}
+	
+	p, a {
+		font-size: calc(var(--unit) * 0.5);
 	}
 	
 	p {
-		font-size: calc(var(--unit) * 0.5);
 		line-height: 1.4;
-		/*margin: calc(var(--unit) * 0.25) 0;*/
 	}
 	
-	a {
-		font-size: calc(var(--unit) * 0.5);
-	}
-	
-	@media (max-width: 1300px){
-		#content{
+	/* Media queries */
+	@media (max-width: 1300px) {
+		#content {
 			--unit: 2.5vw;
 		}
 	}
 	
-	@media (max-width: 900px){
-		#content{
+	@media (max-width: 900px) {
+		#content {
 			--unit: 3vw;
 		}
 		
@@ -140,8 +129,8 @@ Hell, the Dust City Diner's grilled cheese has even been featured in Saveur maga
 		}
 	}
 	
-	@media (max-width: 600px){
-		#content{
+	@media (max-width: 600px) {
+		#content {
 			--unit: 4vw;
 		}
 		
