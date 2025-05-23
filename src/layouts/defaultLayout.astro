@@ -51,4 +51,17 @@ import "../styles/globals.css"
         bottom: 0;
         left: 0;
     }
+
+    /* Add this media query */
+    @media (max-width: 768px) {
+        img {
+            width: 15rem;
+        }
+        
+        @media (max-width: 480px) {
+            img {
+                visibility: hidden;
+            }
+        }
+    }
 </style>

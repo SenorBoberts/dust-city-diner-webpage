@@ -68,6 +68,49 @@
     right: calc(var(--unit) * 5);
     top: calc(var(--unit) * -9);
   }
+
+  /* Add this media query for small screens */
+  @media (max-width: 500px) {
+    .cloud {
+      background: white;
+      border-radius: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 90vw;
+      min-height: auto;
+      position: relative;
+      padding: 20px 15px 15px;
+      background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+      margin-top: 25px; /* Add space for the bubbles to show */
+    }
+    
+    .cloud-content {
+      width: 85vw;
+    }
+    
+    /* Much larger cloud bubbles */
+    .cloud:before,
+    .cloud:after {
+      display: block;
+      background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    .cloud:before {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      top: -40px;
+      right: 30%;
+    }
+    
+    .cloud:after {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      top: -50px;
+      left: 20%;
+    }
+  }
 </style>
 
 
