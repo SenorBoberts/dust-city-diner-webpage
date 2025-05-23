@@ -5,6 +5,7 @@
     --dark: #2C2C2C;
     --cloud-color: #f2ebde;
     --light: #FFFFFF;
+    --background: #e97c40;
   
     /* Optional variations */
     --red-dark: #AA1016;
@@ -14,6 +15,7 @@
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-style: normal;
+
   }
   
   a{
